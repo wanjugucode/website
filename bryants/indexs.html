@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spirol</title>
+<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+    
+
+</head>
+<body>
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: #050A30;
+}
+    </style>
+    <div class="menu">
+        <div class="toggle">
+            <img src="logo.png" alt="" srcset="">
+        </div>
+        <li style="--i:0">
+            <a href="#"><ion-icon name="bulb"></ion-icon>  
+                 <span>legal advice</span>
+        </a>
+        </li>
+        <li style="--i:1">
+            <a href="#" ><ion-icon name="refresh"></ion-icon>
+                <span>in progress</span></a>       
+             </li>
+        <li style="--i:2">
+            <a href="#" ><ion-icon name="refresh"></ion-icon>
+                 <span>in progress</span></a>
+                       
+        </li>
+        <li style="--i:3">
+            <a href="faq.html"><ion-icon name="help-circle"></ion-icon>
+                <span> FAQ</span></a>
+
+        </li>
+        <li style="--i:4">
+            <a href="#"><ion-icon name="call"></ion-icon> 
+                <span>Contacts</span></a>
+                    </li>
+        <li style="--i:5">
+            <a href="service.html"><ion-icon name="home"></ion-icon> 
+                <span>Areas of law</span></a>
+        </li>
+        <li style="--i:6">
+            <a href="about.html"><ion-icon name="people"></ion-icon> 
+                <span>About us</span></a>
+        </li>
+   
+        <li style="--i:7">
+            <a href="service.html"><ion-icon name="home"></ion-icon></icon-icon> 
+                <span>justice</span></a>
+        </li>
+
+    </div>
+    <script>
+        let toggle= document.querySelector('.toggle');
+        let menu= document.querySelector('.menu');
+        toggle.onclick= function(){
+            menu.classList.toggle('active')
+        }
+    </script>
+  
+
+</body>
+</html>

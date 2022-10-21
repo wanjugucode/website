@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background:rgb(3, 57, 82);
+
+
+
+}
+
+.menu{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.menu li{
+    position: absolute;
+    left: 0;
+    list-style: none;
+   transform-origin:100px;
+   transition: 0.2s;
+   transition-delay: calc(0.1s * var(--i));
+   transform: rotate(0deg) translateX(80px);
+   visibility: hidden;
+
+
+  
+
+ }
+
+ .menu.active li {
+    transform: rotate(calc(360deg/ 8 * var(--i)));
+    visibility: visible;
+
+}
+.toggle{
+
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 10px black;
+    font-size:5em ;
+    transition:transform 1s;  
+    
+} 
+
+.toggle:hover{
+
+    box-shadow: 0 1px 15px rgba(4, 242, 250, 0.438), 0 1px 28px rgba(5, 219, 247, 0.815);
+
+}
+.menu li a{
+ 
+ display: flex;
+ height: 150px;
+ width: 150px;
+ border-radius: 50%;
+ justify-content: center;
+ align-items: center;
+ background:rgb(6, 6, 41);
+ box-shadow: 0 1px 10px black;
+ transform: rotate(calc(360deg / -8 * var(--i)));
+ font-size: 4em;
+ transition: 0.5s;
+ margin: -200px;
+ color: white;
+
+
+
+}
+
+.menu li a:hover {
+    box-shadow: 0 1px 15px rgba(4, 242, 250, 0.438), 0 1px 28px rgba(5, 219, 247, 0.815);
+    text-decoration: none;
+
+    
+    
+}
+
+
+.menu.active .toggle{
+    transform: rotate(315deg);
+
+
+}
+
+
+.menu li a:hover ion-icon{
+    display:none;
+}
+
+span{
+    display: none;
+}
+.menu li a:hover span {
+    display:block;
+
+    font-size: 20px;
+    text-decoration: none;
+}
